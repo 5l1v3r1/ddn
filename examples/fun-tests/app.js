@@ -99,7 +99,7 @@ function genOptions() {
 
 async function main() {
     global._require_runtime_ = m => {
-        if (typeof (global._require_native_) == "function") {
+        if (typeof (global._require_native_) === "function") {
             return global._require_native_(m);
         } else {
             return require(m).default || require(m); // 兼容 ESM
